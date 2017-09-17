@@ -1,0 +1,14 @@
+#!/bin/bash
+
+defaults write com.apple.Finder AppleShowAllFiles true
+killall Finder
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install cask wget curl make qt heroku mysql readline node yarn vim redis imagemagick@6 openssl postgresql sqlite
+
+brew cask install cleanmymac google-chrome insomniax java odrive slack sublime-text subtitle-master the-unarchiver transmission tuxera-ntfs vlc
+
+brew install elasticsearch
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
