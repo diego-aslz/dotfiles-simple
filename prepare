@@ -5,10 +5,12 @@ killall Finder
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install cask wget curl make qt heroku mysql readline node yarn vim redis imagemagick@6 openssl postgresql sqlite
+brew install cask wget curl make qt heroku mysql readline node yarn vim redis imagemagick@6 openssl postgresql sqlite pkg-config
 
 brew cask install cleanmymac google-chrome insomniax java odrive slack sublime-text subtitle-master the-unarchiver transmission tuxera-ntfs vlc
 
-brew install elasticsearch
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+brew link imagemagick@6 --force
+# Then to install rmagick gem, something like:
+# C_INCLUDE_PATH=/usr/local/Cellar/imagemagick@6/6.9.9-35/include/ImageMagick-6/ PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick@6/6.9.9-35/lib/pkgconfig/ gem install rmagick
